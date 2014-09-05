@@ -1,0 +1,4 @@
+// DEPERECD
+
+#include <config.h>
+

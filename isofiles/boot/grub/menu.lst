@@ -1,0 +1,17 @@
+default 0
+#timeout 30
+ 
+
+ 
+title CSOS output cga input keyboard
+kernel /boot/kernel.bin -o cga0 -i kb0
+module /boot/initrd.mod
+boot
+
+title CSOS output/input serial 0x3f8
+kernel /boot/kernel.bin -o sr0 -i kb0
+module /boot/initrd.mod
+boot
+
+title Boot from hard disk
+chainloader (hd0)+1
